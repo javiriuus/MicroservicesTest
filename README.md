@@ -36,103 +36,36 @@ Este proyecto es un entorno de microservicios basado en Next.js, TypeScript, y T
 La estructura de archivos del proyecto es la siguiente:
 
 docker/
-├── docker-compose.yaml # Configuración de Docker Compose para ejecutar los servicios localmente\n
-├── Dockerfile.go # Dockerfile para el servicio en Golang\n
-├── Dockerfile.python # Dockerfile para el servicio en Python\n
-├── Dockerfile.postgres # Dockerfile para PostgreSQL\n
-│
-frontend/\n
-├── src/\n
-│ ├── app/\n
-│ │ ├── layout.tsx # Componente de diseño raíz para el App Router\n
-│ │ └── page.tsx # Página principal del App Router\n
-│ ├── components/\n
-│ │ └── Table.tsx # Componente de tabla genérico\n
-│ ├── pages/\n
-│ │ ├── products.tsx # Página para mostrar la tabla de productos\n
-│ │ └── users.tsx # Página para mostrar la tabla de usuarios\n
-│ ├── styles/\n
-│ │ └── globals.css # Archivo CSS global con configuración de Tailwind CSS\n
-│ └── utils/\n
-│ └── fetchData.ts # Archivo para manejar solicitudes HTTP (opcional)\n
-├── public/\n
-│ └── favicon.ico # Icono de favicon\n
-├── tailwind.config.js # Archivo de configuración de Tailwind CSS\n
-├── next.config.js # Configuración específica de Next.js\n
-├── tsconfig.json # Archivo de configuración de TypeScript\n
-└── .eslintrc.json # Configuración de ESLint\n
-│
-go-service/\n
-├── go.mod # Archivo de dependencias de Go\n
-├── go.sum # Archivo de sumas de comprobación de dependencias\n
-├── main.go # Código fuente principal del microservicio en Golang\n
-│\n
-python-service/\n
-├── app.py # Código fuente principal del microservicio en Flask\n
-├── requirements.txt # Archivo con las dependencias de Python\n
-│\n
+    docker-compose.yaml # Configuración de Docker Compose para ejecutar los servicios localmente
+    Dockerfile.go # Dockerfile para el servicio en Golang
+    Dockerfile.python # Dockerfile para el servicio en Python
+    Dockerfile.postgres # Dockerfile para PostgreSQL
 
+frontend/
+    src/
+        app/
+            layout.tsx # Componente de diseño raíz para el App Router
+            page.tsx # Página principal del App Router
+        components/
+            Table.tsx # Componente de tabla genérico
+        pages/
+            products.tsx # Página para mostrar la tabla de productos
+            users.tsx # Página para mostrar la tabla de usuarios
+        styles/
+            globals.css # Archivo CSS global con configuración de Tailwind CSS
+        utils/
+            fetchData.ts # Archivo para manejar solicitudes HTTP (opcional)
+    public/
+        favicon.ico # Icono de favicon
+    tailwind.config.js # Archivo de configuración de Tailwind CSS
+    next.config.js # Configuración específica de Next.js
+    tsconfig.json # Archivo de configuración de TypeScript
+    .eslintrc.json # Configuración de ESLint
+go-service/
+    go.mod # Archivo de dependencias de Go
+    go.sum # Archivo de sumas de comprobación de dependencias
+    main.go # Código fuente principal del microservicio en Golang
+python-service/
+    app.py # Código fuente principal del microservicio en Flask
+    requirements.txt # Archivo con las dependencias de Python
 
-## Cómo ejecutar el proyecto
-
-1. **Instalar dependencias**:
-
-    Desde la carpeta `frontend/`, ejecuta:
-
-    ```bash
-    npm install
-    ```
-
-    Desde la carpeta `go-service/`, ejecuta:
-
-    ```bash
-    go mod tidy
-    ```
-
-    Desde la carpeta `python-service/`, ejecuta:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-2. **Iniciar el servidor de desarrollo**:
-
-    Desde la carpeta `frontend/`, inicia el servidor de desarrollo:
-
-    ```bash
-    npm run dev
-    ```
-
-    Desde las carpetas `go-service/` y `python-service/`, inicia los microservicios:
-
-    ```bash
-    go run main.go
-    python app.py
-    ```
-
-3. **Ver la aplicación**:
-
-    Ve a [http://localhost:3000](http://localhost:3000) en tu navegador web para acceder a la aplicación.
-
-4. **Iniciar los microservicios**:
-
-    Asegúrate de tener Docker y Kubernetes configurados.
-
-    Desde la carpeta `docker/`, inicia los servicios con Docker Compose:
-
-    ```bash
-    docker-compose up
-    ```
-
-## Contribuciones
-
-Si deseas contribuir al proyecto, por favor, sigue estas pautas:
-
-- Haz un fork del proyecto.
-- Crea una nueva rama para tus cambios.
-- Realiza tus cambios y realiza pruebas.
-- Envía un pull request.
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT. Por favor, consulta el archivo `LICENSE` para obtener más información.
