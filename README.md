@@ -36,41 +36,41 @@ Este proyecto es un entorno de microservicios basado en Next.js, TypeScript, y T
 La estructura de archivos del proyecto es la siguiente:
 
 docker/
-├── docker-compose.yaml # Configuración de Docker Compose para ejecutar los servicios localmente
-├── Dockerfile.go # Dockerfile para el servicio en Golang
-├── Dockerfile.python # Dockerfile para el servicio en Python
-├── Dockerfile.postgres # Dockerfile para PostgreSQL
+├── docker-compose.yaml # Configuración de Docker Compose para ejecutar los servicios localmente\n
+├── Dockerfile.go # Dockerfile para el servicio en Golang\n
+├── Dockerfile.python # Dockerfile para el servicio en Python\n
+├── Dockerfile.postgres # Dockerfile para PostgreSQL\n
 │
-frontend/
-├── src/
-│ ├── app/
-│ │ ├── layout.tsx # Componente de diseño raíz para el App Router
-│ │ └── page.tsx # Página principal del App Router
-│ ├── components/
-│ │ └── Table.tsx # Componente de tabla genérico
-│ ├── pages/
-│ │ ├── products.tsx # Página para mostrar la tabla de productos
-│ │ └── users.tsx # Página para mostrar la tabla de usuarios
-│ ├── styles/
-│ │ └── globals.css # Archivo CSS global con configuración de Tailwind CSS
-│ └── utils/
-│ └── fetchData.ts # Archivo para manejar solicitudes HTTP (opcional)
-├── public/
-│ └── favicon.ico # Icono de favicon
-├── tailwind.config.js # Archivo de configuración de Tailwind CSS
-├── next.config.js # Configuración específica de Next.js
-├── tsconfig.json # Archivo de configuración de TypeScript
-└── .eslintrc.json # Configuración de ESLint
+frontend/\n
+├── src/\n
+│ ├── app/\n
+│ │ ├── layout.tsx # Componente de diseño raíz para el App Router\n
+│ │ └── page.tsx # Página principal del App Router\n
+│ ├── components/\n
+│ │ └── Table.tsx # Componente de tabla genérico\n
+│ ├── pages/\n
+│ │ ├── products.tsx # Página para mostrar la tabla de productos\n
+│ │ └── users.tsx # Página para mostrar la tabla de usuarios\n
+│ ├── styles/\n
+│ │ └── globals.css # Archivo CSS global con configuración de Tailwind CSS\n
+│ └── utils/\n
+│ └── fetchData.ts # Archivo para manejar solicitudes HTTP (opcional)\n
+├── public/\n
+│ └── favicon.ico # Icono de favicon\n
+├── tailwind.config.js # Archivo de configuración de Tailwind CSS\n
+├── next.config.js # Configuración específica de Next.js\n
+├── tsconfig.json # Archivo de configuración de TypeScript\n
+└── .eslintrc.json # Configuración de ESLint\n
 │
-go-service/
-├── go.mod # Archivo de dependencias de Go
-├── go.sum # Archivo de sumas de comprobación de dependencias
-├── main.go # Código fuente principal del microservicio en Golang
-│
-python-service/
-├── app.py # Código fuente principal del microservicio en Flask
-├── requirements.txt # Archivo con las dependencias de Python
-│
+go-service/\n
+├── go.mod # Archivo de dependencias de Go\n
+├── go.sum # Archivo de sumas de comprobación de dependencias\n
+├── main.go # Código fuente principal del microservicio en Golang\n
+│\n
+python-service/\n
+├── app.py # Código fuente principal del microservicio en Flask\n
+├── requirements.txt # Archivo con las dependencias de Python\n
+│\n
 
 
 ## Cómo ejecutar el proyecto
